@@ -23,6 +23,20 @@ public class ContaTerminal {
             }
         } while (ok);
 
+        do {
+            System.out.print("Insira o número de sua conta: ");
+            entradaTexto = x.nextLine();
+
+            if(!entradaTexto.matches("[0-9]+")){
+                System.out.println("Entrada invalida, pfv insira somente números");
+                ok = false;
+            }else{
+                ok = true;
+                conta.setNumeroConta(Integer.valueOf(entradaTexto));
+            }
+        } while (ok);
+
+        
         x.close();
         y.close();
     }
